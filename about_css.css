@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #373737;
+}
+
+
+.nav-menu {
+    background-color: black;
+    padding: 20px;
+    height: 70px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    border-bottom: 1px solid orange;
+}
+
+
+.textao-missao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    min-height: 60vh;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+
+
+    background-color: #373737;
+
+    border: 3px solid orangered;
+
+    border-radius: 10px;
+
+    font-weight: normal;
+    gap: 15px;
+}
+
+/* Estilo para destacar os nomes das modalidades dentro do texto */
+.textao-missao strong {
+    color: orangered;
+}
+
+
+h1 {
+    font-size: 60px;
+    animation: entrarEsquerda 1s ease;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    animation: entrarDireita 1s ease;
+}
+
+@keyframes entrarEsquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entrarDireita {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .textao-missao {
+        font-size: 18px;
+
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+
+.header-missao {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    gap: 40px;
+
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.logo-topo {
+
+    width: 220px;
+
+    height: auto;
+
+    margin-left: -150px;
+
+    animation: entrarEsquerda 1s ease;
+    animation: pulsar 2s infinite;
+
+
+}
+
+.header-missao h1 {
+    font-size: 60px;
+    margin: 0;
+    /* Garante que o título não herde margens que o desalinhem */
+}
+
+/* Animação de "Pulsar" */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+
+    100% {
+        transform: scale(1);
+    }
+}

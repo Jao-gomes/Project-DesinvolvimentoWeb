@@ -1,0 +1,228 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aplicando estilo ao body e em todo o documento */
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Animação de fundo com gradiente */
+    background: linear-gradient(-45deg, #ff7403, #f0a356, #ff7605, #d45f00);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+
+/* Animação de fundo */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* Padrão do Elemento pai do menu */
+
+/* Estilizando container */
+.nav-menu {
+    background-color: black;
+    /* Nosso fundo */
+    padding: 20px;
+    height: 70px;
+    /* Espaço entre borda e conteúdo do menu */
+}
+
+/* Classe menu */
+
+/* Estilizando conteúdo dentro do navbar */
+/* Não precisa usar .menu ul -> ul já é o menu */
+.menu {
+    /* Ativando display flex */
+    display: flex;
+
+    /* Centralizando horizontalmente e verticalmente */
+    justify-content: center;
+    align-items: center;
+
+    /* Distância entre os elementos */
+    gap: 25px;
+
+    /* Zerando estilos de lista */
+    list-style: none;
+
+    /* Zerando padrões de navegador */
+
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    /* Espaço entre texto e linha */
+    padding-bottom: 5px;
+
+    /* Animação suave */
+    transition: all 0.3s ease;
+
+}
+
+
+
+.menu li a:hover {
+    border-bottom: 1px solid white;
+    text-decoration: white;
+}
+
+/* Seção de conteúdo Principal */
+
+/* Centralização */
+
+#conteudo-principal {
+    /* Ativando Display: flex */
+    display: flex;
+    /* Colando itens um embaixo do outro */
+    flex-direction: column;
+    /* Centralizando verticalmente */
+    justify-content: center;
+    /* Centralizando horizontalmente */
+    align-items: center;
+
+    text-align: center;
+    /* Seção vai ocupar 100% altura da janela */
+    height: 40vh;
+    /* Espaço entre conteúdo e borda */
+    padding: 20px;
+    margin: 0;
+    font-weight: bolder;
+    gap: 10px;
+}
+
+/* Estilizando imagem */
+
+.logo-fit img {
+    width: 30%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 50px;
+    animation: pulsar 2s infinite;
+
+
+}
+
+h1 {
+    font-size: 80px;
+    animation: entrarEsquerda 1s ease;
+}
+
+#conteudo-principal p:first-of-type {
+    font-size: 18px;
+}
+
+#conteudo-principal p:last-of-type {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+p,
+h2 {
+    animation: entrarDireita 1s ease;
+}
+
+/* Animações */
+
+
+/* Animação no qual o elemento começa invisível e começa na esquerda */
+@keyframes entrarEsquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animação no qual o elemento começa invisível e começa na direita */
+@keyframes entrarDireita {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animação de "Pulsar" */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Layout responsivo */
+
+/* Vai aplicar essas regras quando a tela é pequena */
+@media (max-width: 600px) {
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-fit img {
+        width: 60%;
+    }
+
+    #conteudo-principal {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .Titulo-principal {
+        font-size: 28px;
+    }
+
+    .frase-impactante {
+        font-size: 18px;
+    }
+}
+
+.textao-missao {
+    border: 1px solid black;
+}
