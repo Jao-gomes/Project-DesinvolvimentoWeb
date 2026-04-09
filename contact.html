@@ -1,45 +1,86 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="about_css.css" />
-  </head>
 
-  <body>
-    <nav class="nav-menu">
-      <ul class="menu">
-        <li><a href="services.html">Serviços</a></li>
-        <li><a href="about.html">Sobre nós</a></li>
-        <li><a href="news.html">Notícias</a></li>
-        <li><a href="contact.html">Contato</a></li>
-        <li><a href="index.html">Início</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Vulcan Fit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <main class="main-contato">
-      <h2>Acompanhe nossas mídias sociais!</h2>
+<body class="pagina-contato">
+  <nav class="nav-menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="menu" id="menuPrincipal">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="services.html">Serviços</a></li>
+      <li><a href="about.html">Sobre nós</a></li>
+      <li><a href="news.html">Notícias</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="contato-wrapper">
+
+    <div class="contato-info">
+      <h2>Fale com a gente</h2>
+      <p class="contato-subtitulo">Escolha como prefere entrar em contato</p>
+
       <ul class="lista-contato">
         <li>
-          Email
           <a href="mailto:vulcanfit368@gmail.com">
-            <img src="gmail.png" class="icon" />
-            : vulcanfit368@gmail.com
+            <img src="images/gmail.png" class="icon" alt="Gmail" />
+            <span>vulcanfit368@gmail.com</span>
           </a>
         </li>
         <li>
-          Telefone
-          <a href="tel:5521978962125">
-            <img src="zap.jpg" class="icon" />
-            : 5521978962125
+          <a href="https://wa.me/5521978962125" target="_blank">
+            <img src="images/zap.jpg" class="icon" alt="WhatsApp" />
+            <span>(21) 97896-2125</span>
           </a>
         </li>
       </ul>
-    </main>
+    </div>
 
-    <footer class="footer">
-      <p class="item-footer">Criado 20/03/2026</p>
-    </footer>
-  </body>
+    <form
+      class="form-contato"
+      id="formEnviar"
+      action="https://formsubmit.co/vulcanfit368@gmail.com"
+      method="POST"
+    >
+      <input type="hidden" name="_subject" value="Nova mensagem - Vulcan Fit" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+
+      <h3>Envie uma mensagem</h3>
+
+      <div class="campo-form">
+        <label for="name">Seu nome</label>
+        <input type="text" name="name" id="name" placeholder="Ex: João Silva" required />
+      </div>
+
+      <div class="campo-form">
+        <label for="email">Seu email</label>
+        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required />
+      </div>
+
+      <div class="campo-form">
+        <label for="message">Sua mensagem</label>
+        <textarea name="message" id="message" placeholder="Escreva sua mensagem aqui..." required></textarea>
+      </div>
+
+      <div id="msgFeedback" class="msg-feedback"></div>
+
+      <button type="submit" class="btn-enviar" id="btnEnviar">ENVIAR</button>
+    </form>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
