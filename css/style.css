@@ -1,0 +1,737 @@
+/* =============================================
+   RESET GLOBAL
+   ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =============================================
+   BODY E HTML
+   ============================================= */
+body,
+html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+/* Página principal (index.html) */
+body {
+  background-image: url('../images/academiatop10.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+    -45deg,
+    #ff7403,
+    #f0a356,
+    #ff7605,
+    #d45f00
+  ) 1;
+}
+
+/* =============================================
+   NAVBAR E FOOTER
+   ============================================= */
+.nav-menu,
+.footer {
+  background-color: rgba(0, 0, 0, 0.92);
+  padding: 6px;
+  height: 48px;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid #ff7403;
+}
+
+.nav-menu {
+  top: 0;
+}
+
+.footer {
+  bottom: 0;
+  border-bottom: none;
+  border-top: 2px solid #ff7403;
+}
+
+/* =============================================
+   MENU
+   ============================================= */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  height: 100%;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ccc;
+  padding-bottom: 4px;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ff7403;
+  border-bottom: 2px solid #ff7403;
+}
+
+/* Menu hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* =============================================
+   FOOTER ITEMS
+   ============================================= */
+.item-footer,
+.item-footer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* =============================================
+   MAIN (página principal)
+   ============================================= */
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+/* =============================================
+   CONTAINER PÁGINA PRINCIPAL
+   ============================================= */
+.Container-pagina-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70vh;
+  gap: 15px;
+  animation: entrarDireita 1s ease;
+}
+
+.Container-pagina-principal p:first-of-type {
+  font-size: 18px;
+}
+
+.Container-pagina-principal p:last-of-type {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.Titulo-principal {
+  font-size: 4rem;
+  letter-spacing: 4px;
+  text-shadow: 0 0 30px rgba(255, 116, 3, 0.6);
+}
+
+/* =============================================
+   LOGO
+   ============================================= */
+.logo-fit {
+  width: 170px;
+  filter: drop-shadow(0 0 12px rgba(255, 116, 3, 0.5));
+}
+
+.logo-topo {
+  width: 220px;
+  height: auto;
+  margin-left: -150px;
+  animation: pulsar 2s infinite;
+}
+
+/* =============================================
+   CONTEÚDO DE IMPACTO (index)
+   ============================================= */
+.conteudo-impacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 70vh;
+  gap: 15px;
+  animation: entrarEsquerda 1s ease;
+}
+
+.frase-impactante {
+  font-size: 2.2rem;
+  color: #ff7403;
+  text-shadow: 0 0 20px rgba(255, 116, 3, 0.4);
+}
+
+.conteudo-impacto p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+/* =============================================
+   HEADER MISSÃO (about)
+   ============================================= */
+.header-missao {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.header-missao h1 {
+  animation: entrarEsquerda 1s ease;
+  font-size: 60px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* =============================================
+   TEXTOS DE MISSÃO (about)
+   ============================================= */
+.textao-missao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 60vh;
+  padding: 50px;
+  margin: 40px auto;
+  max-width: 1100px;
+  background-color: rgba(30, 30, 30, 0.95);
+  border: 2px solid #ff7403;
+  border-radius: 12px;
+  font-weight: normal;
+  gap: 18px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.textao-missao strong {
+  color: #ff7403;
+}
+
+.textao-missao p {
+  max-width: 800px;
+  font-size: 1.05rem;
+}
+
+/* =============================================
+   TÍTULOS E PARÁGRAFOS GERAIS
+   ============================================= */
+h1 {
+  font-size: 60px;
+  animation: entrarEsquerda 1s ease;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+p {
+  animation: entrarDireita 1s ease;
+}
+
+/* =============================================
+   CONTEÚDO GERAL (news, etc.)
+   ============================================= */
+.conteudo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+}
+
+/* =============================================
+   SEÇÃO DE NOTÍCIAS
+   ============================================= */
+.sessao-news {
+  animation: entrarEsquerda 1s ease;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 100px 20px 80px;
+}
+
+.sessao-news h1 {
+  font-size: 2.5rem;
+  color: white;
+  border-bottom: 3px solid #ff7403;
+  padding-bottom: 10px;
+}
+
+.sessao-news img {
+  animation: entrarEsquerda 1s ease;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sessao-news img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 116, 3, 0.25);
+}
+
+/* =============================================
+   SEÇÃO DE SERVIÇOS
+   ============================================= */
+.sessao-servicos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 55px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.sessao-servicos h2 {
+  animation: entrarDireita 1s ease;
+  padding-top: 20px;
+  font-size: 2rem;
+  border-bottom: 3px solid #ff7403;
+  padding-bottom: 10px;
+}
+
+.container-servicos {
+  animation: entrarEsquerda 1s ease;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.servico-item {
+  animation: entrarEsquerda 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  background-color: #242424;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.servico-item:hover {
+  transform: translateY(-6px);
+  border-color: #ff7403;
+}
+
+.servico-item p {
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.servico-item img {
+  animation: entrarEsquerda 1s ease;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.highlight {
+  color: #ff7403;
+}
+
+/* =============================================
+   SEÇÃO DE CONTATO
+   ============================================= */
+.contato-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  min-height: 100vh;
+  padding: 100px 60px 60px;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: entrarEsquerda 1s ease;
+  max-width: 320px;
+}
+
+.contato-info h2 {
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.contato-subtitulo {
+  color: #aaa;
+  font-size: 0.95rem;
+  animation: none;
+}
+
+.lista-contato {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lista-contato li {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.lista-contato a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ff7403;
+  transition: opacity 0.3s;
+}
+
+.lista-contato a:hover {
+  opacity: 0.75;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+
+/* =============================================
+   FORMULÁRIO DE CONTATO
+   ============================================= */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px;
+  margin: 0 auto 60px;
+  max-width: 500px;
+  width: 90%;
+  background-color: #242424;
+  border: 1px solid #333;
+  border-radius: 12px;
+  animation: entrarDireita 1s ease;
+}
+
+.form-contato h3 {
+  font-size: 1.3rem;
+  color: #ff7403;
+  margin-bottom: 8px;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 6px;
+}
+
+.campo-form label {
+  font-size: 0.85rem;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
+
+.campo-form input,
+.campo-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  border-color: #ff7403;
+}
+
+.campo-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7403;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 6px;
+}
+
+.btn-enviar:hover {
+  background-color: #e06600;
+  transform: translateY(-2px);
+}
+
+/* Mensagem de feedback do formulário */
+.msg-feedback {
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.msg-feedback.sucesso {
+  background-color: rgba(0, 200, 100, 0.15);
+  border: 1px solid #00c864;
+  color: #00c864;
+}
+
+.msg-feedback.erro {
+  background-color: rgba(255, 60, 60, 0.15);
+  border: 1px solid #ff3c3c;
+  color: #ff3c3c;
+}
+
+/* =============================================
+   ANIMAÇÕES
+   ============================================= */
+@keyframes entrarEsquerda {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entrarDireita {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulsar {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.97);
+    padding: 10px 0;
+    border-bottom: 2px solid #ff7403;
+  }
+
+  .menu.aberto {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-bottom: none;
+  }
+
+  .menu a:hover {
+    background-color: #1a1a1a;
+    border-bottom: none;
+    color: #ff7403;
+  }
+
+  .Container-pagina-principal {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .conteudo-impacto {
+    height: auto;
+  }
+
+  .Titulo-principal {
+    font-size: 2.5rem;
+  }
+
+  .frase-impactante {
+    font-size: 1.5rem;
+  }
+
+  .header-missao {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-missao h1 {
+    font-size: 36px;
+  }
+
+  .logo-topo {
+    margin-left: 0;
+    width: 140px;
+  }
+
+  .textao-missao {
+    font-size: 0.95rem;
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .container-servicos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servico-item {
+    width: 90%;
+  }
+
+  .form-contato {
+    padding: 24px 16px;
+  }
+
+  .contato-wrapper {
+    flex-direction: column;
+    padding: 90px 20px 40px;
+    gap: 30px;
+  }
+
+  .contato-info {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* =============================================
+   CORREÇÃO OVERFLOW - PÁGINAS COM SCROLL
+   ============================================= */
+body.pagina-contato,
+body.pagina-about,
+body.pagina-news,
+body.pagina-servicos {
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
+  background-image: none;
+  background-color: #1a1a1a;
+}
