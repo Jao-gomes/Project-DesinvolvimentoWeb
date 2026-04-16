@@ -9,7 +9,7 @@
 
   <body class="pagina-servicos">
     <nav class="nav-menu">
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
       <ul class="menu" id="menuPrincipal">
         <li><a href="index.html">Início</a></li>
         <li><a href="services.html">Serviços</a></li>
@@ -18,30 +18,114 @@
         <li><a href="contact.html">Contato</a></li>
       </ul>
     </nav>
+
     <section class="sessao-servicos">
       <h2>Confira nossos serviços</h2>
 
       <div class="container-servicos">
-        <div class="servico-item">
+
+        <!-- FUNCIONAL -->
+        <div class="servico-item" onclick="abrirModal('modal-funcional')">
           <p>Confira nosso funcional</p>
-          <img
-            src="images/funcional.webp"
-            alt="Pessoa praticando treinamento funcional"
-          />
+          <img src="images/funcional.webp" alt="Pessoa praticando treinamento funcional" />
+          <span class="btn-saiba-mais">Saiba mais</span>
         </div>
 
-        <div class="servico-item">
+        <!-- DANÇA -->
+        <div class="servico-item" onclick="abrirModal('modal-danca')">
           <p>Confira nossa aula de dança</p>
           <img src="images/danca.jpg" alt="Alunos em aula de dança" />
+          <span class="btn-saiba-mais">Saiba mais</span>
         </div>
 
-        <div class="servico-item">
-          <p>
-            Confira nossa agenda de treinos
-          </p>
+        <!-- PERSONAL -->
+        <div class="servico-item" onclick="abrirModal('modal-personal')">
+          <p>Confira nossa agenda de treinos</p>
           <img src="images/personal.webp" alt="Treinador pessoal com aluno" />
+          <span class="btn-saiba-mais">Saiba mais</span>
         </div>
+
       </div>
     </section>
+
+    <!-- MODAL FUNCIONAL -->
+    <div class="modal-overlay" id="modal-funcional">
+      <div class="modal-box">
+        <button class="modal-fechar" onclick="fecharModal('modal-funcional')">✕</button>
+        <img src="images/funcional.webp" alt="Treinamento Funcional" class="modal-img" />
+        <h3>Treinamento Funcional</h3>
+        <p class="modal-descricao">
+          O treinamento funcional trabalha o corpo como um todo, melhorando força, equilíbrio, coordenação e resistência. 
+          Ideal para todos os níveis, nossas aulas são dinâmicas, desafiadoras e conduzidas por profissionais qualificados.
+        </p>
+        <div class="modal-info">
+          <div class="modal-info-item">
+            <span class="modal-label">🕐 Horários</span>
+            <span>Seg, Qua e Sex — 7h | 12h | 18h</span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-label">💰 Planos</span>
+            <span>Mensal: R$ 120  |  Trimestral: R$ 320</span>
+          </div>
+        </div>
+        <a href="https://wa.me/5521978962125" target="_blank" class="modal-btn-whatsapp">
+          📲 Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- MODAL DANÇA -->
+    <div class="modal-overlay" id="modal-danca">
+      <div class="modal-box">
+        <button class="modal-fechar" onclick="fecharModal('modal-danca')">✕</button>
+        <img src="images/danca.jpg" alt="Aula de Dança" class="modal-img" />
+        <h3>Aula de Dança</h3>
+        <p class="modal-descricao">
+          Nossas aulas de dança combinam ritmo, expressão corporal e condicionamento físico. 
+          Do iniciante ao avançado, você vai se movimentar, se divertir e transformar seu corpo ao som de grandes batidas.
+        </p>
+        <div class="modal-info">
+          <div class="modal-info-item">
+            <span class="modal-label">🕐 Horários</span>
+            <span>Ter e Qui — 9h | 19h | Sáb — 10h</span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-label">💰 Planos</span>
+            <span>Mensal: R$ 100  |  Trimestral: R$ 270</span>
+          </div>
+        </div>
+        <a href="https://wa.me/5521978962125" target="_blank" class="modal-btn-whatsapp">
+          📲 Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- MODAL PERSONAL -->
+    <div class="modal-overlay" id="modal-personal">
+      <div class="modal-box">
+        <button class="modal-fechar" onclick="fecharModal('modal-personal')">✕</button>
+        <img src="images/personal.webp" alt="Treino Personalizado" class="modal-img" />
+        <h3>Treino Personalizado</h3>
+        <p class="modal-descricao">
+          Com nossos personais altamente qualificados, você terá um treino 100% adaptado aos seus objetivos. 
+          Seja para ganho de massa, emagrecimento ou performance, estamos prontos para ir além com você.
+        </p>
+        <div class="modal-info">
+          <div class="modal-info-item">
+            <span class="modal-label">🕐 Horários</span>
+            <span>Horários flexíveis — agende com seu personal</span>
+          </div>
+          <div class="modal-info-item">
+            <span class="modal-label">💰 Planos</span>
+            <span>A partir de R$ 200/mês — consulte condições</span>
+          </div>
+        </div>
+        <a href="https://wa.me/5521978962125" target="_blank" class="modal-btn-whatsapp">
+          📲 Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

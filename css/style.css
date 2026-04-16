@@ -723,8 +723,148 @@ p {
 }
 
 /* =============================================
-   CORREÇÃO OVERFLOW - PÁGINAS COM SCROLL
+   BOTÃO SAIBA MAIS (cards de serviço)
    ============================================= */
+.btn-saiba-mais {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 22px;
+  background-color: #ff7403;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.servico-item:hover .btn-saiba-mais {
+  background-color: #e06600;
+  transform: translateY(-2px);
+}
+
+.servico-item {
+  cursor: pointer;
+}
+
+/* =============================================
+   MODAIS
+   ============================================= */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-overlay.ativo {
+  display: flex;
+}
+
+.modal-box {
+  background-color: #242424;
+  border: 1px solid #ff7403;
+  border-radius: 14px;
+  max-width: 520px;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: entrarDireita 0.3s ease;
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-fechar:hover {
+  color: #ff7403;
+}
+
+.modal-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.modal-box h3 {
+  font-size: 1.5rem;
+  color: #ff7403;
+  margin: 0;
+}
+
+.modal-descricao {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  animation: none;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #333;
+}
+
+.modal-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.modal-label {
+  font-weight: bold;
+  color: #ff7403;
+  font-size: 0.85rem;
+}
+
+.modal-btn-whatsapp {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-btn-whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .modal-box {
+    padding: 20px 16px;
+  }
+}
+
 body.pagina-contato,
 body.pagina-about,
 body.pagina-news,

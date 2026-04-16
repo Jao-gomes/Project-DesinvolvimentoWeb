@@ -60,6 +60,30 @@ if (btnEnviar) {
     });
 }
 
+// Modais de serviços
+function abrirModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add('ativo');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function fecharModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.remove('ativo');
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('modal-overlay')) {
+    e.target.classList.remove('ativo');
+    document.body.style.overflow = '';
+  }
+});
+
 // Menu hamburguer (mobile)
 const menuToggle = document.getElementById('menuToggle');
 const menu = document.getElementById('menuPrincipal');
